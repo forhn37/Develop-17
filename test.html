@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>...스크립트 앞 콘텐츠...</p>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => alert("`defer` 스크립트가 실행된 후, DOM이 준비되었습니다!")); // (2)
+</script>
+
+<script defer src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script>
+
+<p>...스크립트 뒤 콘텐츠...</p>
+</body>
+</html>
+<!-- 1. html을 읽고, 2. 외부 javascript를 실행하며 (defer가 있는 경우임) 특히 중요한 것은 dom은 읽지만 dom관련 domcontentloaded는 script를 다 읽고 실행된다.
